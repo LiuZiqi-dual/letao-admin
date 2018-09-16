@@ -84,12 +84,18 @@
 </template>
 
 <script>
+import { gethehe } from '@/api/index.js'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted () {
+    gethehe().then(res => {
+      console.log(res)
+    })
   }
 }
 </script>

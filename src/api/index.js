@@ -4,9 +4,9 @@ axios.defaults.baseURL = baseURL
 
 axios.defaults.withCredentials = true
 
-// export const  书写格式参考
-// export const gethehe = () => {
-//   return axios.get('/employee/employeeLogout').then(res => {
-//     return res.data
-//   })
-// }
+// 登陆验证请求
+export const getLoginData = (params) => {
+  return axios.post('/employee/employeeLogin', params).then(res => {
+    return res.data
+  })
+}
